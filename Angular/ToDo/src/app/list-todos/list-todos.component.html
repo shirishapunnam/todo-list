@@ -1,0 +1,23 @@
+<table border="1">
+    <caption>My ToDO's</caption>
+
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>targetDate</th>
+        <th>Is completed?</th>
+    </tr>
+</thead>
+<tbody>
+    <!--  ng directive -- for (Todo todo:todos) -->
+   <!-- It is also acts as for loop -->
+    <tr *ngFor="let todo of todos"> 
+        <td>{{todo.Id}}</td>
+        <td>{{todo.Description}}</td>
+        <!--Piping | which coverts one form to another-->
+        <td>{{todo.targetDate | date | uppercase}}</td>
+        <td>{{todo.done}}</td>
+    </tr>
+</tbody>
+</table>
